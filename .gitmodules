@@ -3,4 +3,4 @@
 	url = https://github.com/sekharkasi/react-client.git
 [submodule "react-server"]
 	path = react-server
-	url = https://github.com/sekharkasi/react-server.git
+	url = https://github.com/sekharkasi/react-client.git
