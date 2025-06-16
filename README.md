@@ -6,8 +6,8 @@ A full-stack application consisting of a React client, Node.js server, and Postg
 
 The project is organized into three main components:
 
-- `react-client/`: Frontend React application
-- `react-server/`: Backend Node.js server
+- `react-client/`: Frontend React application (submodule)
+- `react-server/`: Backend Node.js server (submodule)
 - `db/`: Database initialization scripts
 
 ## Prerequisites
@@ -95,4 +95,17 @@ The server requires the following environment variables (already configured in d
 
 - `DB_HOST`: Database host (default: db)
 - `DB_PORT`: Database port (default: 5432)
-- `
+- `DB_USER`: Database username (default: postgres)
+- `DB_PASSWORD`: Database password (default: postgres)
+- `DB_NAME`: Database name (default: demoapp)
+- `PORT`: Server port (default: 19200)
+- `NODE_ENV`: Environment (development/production)
+
+## Repository Structure
+
+This project uses Git submodules to manage the client and server components:
+
+- `react-client`: [https://github.com/sekharkasi/react-client.git](https://github.com/sekharkasi/react-client.git)
+- `react-server`: [https://github.com/sekharkasi/react-server.git](https://github.com/sekharkasi/react-server.git)
+
+Each submodule is maintained in its own repository, allowing for independent version control and development.
