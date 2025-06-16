@@ -37,3 +37,4 @@ services:
       - "5433:5432"
 volumes:
   pgdata:
+#force update
