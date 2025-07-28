@@ -71,6 +71,15 @@ CREATE TABLE IF NOT EXISTS public.cart_items (
     CONSTRAINT cart_items_quantity_check CHECK (quantity > 0)
 );
 
+CREATE TABLE IF NOT EXISTS public.product_reviews (
+    id SERIAL PRIMARY KEY,
+    user_id uuid NOT NULL REFERENCES public.users(id) ON DELETE CASCADE,
+    product_id uuid NOT NULL REFERENCES public.products(id) ON DELETE CASCADE,
+    rating INTEGER NOT NULL CHECK (rating >= 1 AND rating <= 5),
+    review TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
 insert into public.products(id, product_name, price_per_unit, description, active, image)
 values(gen_random_uuid(), 'colors', 10, 'water colors', true, 
